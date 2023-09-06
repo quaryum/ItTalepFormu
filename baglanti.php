@@ -21,7 +21,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO haber (ad, soyad, mail)
+$sql = "INSERT INTO bilgiler (ad, soyad, mail)
 VALUES ('John', 'Doe', 'john@example.com')";
 
 if ($conn->query($sql) === TRUE) {
@@ -50,7 +50,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO haber (ad, soyad, mail)
+$sql = "INSERT INTO bilgiler (ad, soyad, mail)
 VALUES ('John', 'Doe', 'john@example.com')";
 
 if ($conn->query($sql) === TRUE) {
@@ -74,7 +74,7 @@ try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $sql = "INSERT INTO haber (ad, soyad, mail)
+  $sql = "INSERT INTO bilgiler (ad, soyad, mail)
   VALUES ('John', 'Doe', 'john@example.com')";
   // use exec() because no results are returned
   $conn->exec($sql);
@@ -87,16 +87,16 @@ $conn = null;
 */
 
 	
-$servername = "192.168.0.54";
-$username = "quaryum";
+$servername = "db.quaryum.local";
+$username = "ItTalepFormu";
 $password = "qwE1234--";
-$dbname = "calisma";
+$dbname = "ItTalepFormu";
 
 try {
   $conn=new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
   // set the PDO error mode to exception
   //$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  //$sql = "INSERT INTO haber (Talep_turu, Talep_tarihi, Talep_departmani)
+  //$sql = "INSERT INTO bilgiler (Talep_turu, Talep_tarihi, Talep_departmani)
   //VALUES ('IT talep formu', '2023-06-12 16:20:12', 'bilgi işlem')";
   // use exec() because no results are returned
   //$conn->exec($sql);
@@ -120,7 +120,7 @@ try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $sql = "INSERT INTO haber (ad, soyad, mail)
+  $sql = "INSERT INTO bilgiler (ad, soyad, mail)
   VALUES ('John', 'Doe', 'john@example.com')";
   // use exec() because no results are returned
   $conn->exec($sql);

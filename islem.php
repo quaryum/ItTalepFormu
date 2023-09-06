@@ -7,7 +7,7 @@ if (isset($_POST['Gonder'])) {
 	
 echo $_POST['Talep_talep_acan'];
 	
-$Kaydet=$conn->prepare("INSERT into haber set
+$Kaydet=$conn->prepare("INSERT into bilgiler set
 	Talep_turu=:Talep_turu,
 	Talep_departmani=:Talep_departmani,
 	Talep_talep_acan=:Talep_talep_acan,
